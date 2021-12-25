@@ -3,6 +3,7 @@ import moment from "moment";
 import React, { useState } from "react";
 import { useGetCryptosQuery } from "../services/CryptoApi";
 import { useGetCryptoNewsQuery } from "../services/NewsApi";
+import Loader from "./Loader";
 
 function News({ simplified }) {
   const [newsCategory, setNewsCategory] = useState("Cryptocurrency");
@@ -18,7 +19,7 @@ function News({ simplified }) {
   const demoImage =
     "https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News";
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
   return (
     <>

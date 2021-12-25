@@ -3,6 +3,7 @@ import HTMLReactParser from "html-react-parser";
 import millify from "millify";
 import React from "react";
 import { useGetCryptoExchangesQuery } from "../services/CryptoApi";
+import Loader from "./Loader";
 
 function Exchanges() {
   const { data, isFetching } = useGetCryptoExchangesQuery();
@@ -12,9 +13,8 @@ function Exchanges() {
 
   const cryptoExchanges = data?.data?.exchanges;
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
-  console.log(cryptoExchanges);
   return (
     <>
       <Row className="exchanges-heading">
