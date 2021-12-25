@@ -375,3 +375,24 @@ a:hover {
   padding: 20px;
   align-items: center;
 }
+.exchanges-heading > * {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.exchanges > * {
+  margin-right: 1rem;
+}
+.market,
+.volume,
+.share {
+  font-weight: bold;
+}
+.volume {
+  margin-left: 0.5rem;
+}
+.market {
+  margin-left: 0.5rem;
+}
+.share {
+  margin-left: 0.5rem;
+}
